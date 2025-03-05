@@ -5,4 +5,5 @@ edit: https://github.com/janikasaretzki/CFH_MVV_Bookdown/edit/main/%s
 view: https://github.com/janikasaretzki/CFH_MVV_Bookdown/blob/main/%s
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Kapitel "
+

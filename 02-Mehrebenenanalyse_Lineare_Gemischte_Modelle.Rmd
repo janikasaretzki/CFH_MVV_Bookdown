@@ -1,0 +1,39 @@
+# Mehrebenenanalyse - Lineare gemischte Modelle
+
+## Einfaches lineares Regressionsmodell
+
+## Unconditional Random Effects Model (UREM)
+
+### Intra-Class-Correlation (ICC)
+Einfluss der hierarchischen Struktur bestimmen
+
+## Random Intercept, Fixed Slope Modell
+
+## Random Intercept, Random Slope Modell
+
+### Chi-Quadrat-Likelihood Ratio Test
+Modellvergleiche
+
+## Fixed Intercept, Random Slope Model
+
+## Wachstumskurvenmodelle
+
+## Einfaches Wachstumskurvenmodell (ohne Prädiktor)
+
+### Random Intercept, Fixed Slope Model
+
+### Random Intercept, Random Slope Model
+
+## Konditionales Wachstumskurvenmodell (mit Prädiktor)
+
+### Random Intercept, Random Slope Model (2 Gruppen)
+
+### Random Intercept, Random Slope Model (3 Gruppen)
+
+## Poweranalyse
+
+
+
+
+
+

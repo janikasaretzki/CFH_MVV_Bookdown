@@ -1,0 +1,11 @@
+# Multivariate (latente) Modellierung
+
+## Strukturgleichungsmodell
+
+### Konfirmatorische Faktorenanalyse
+
+#### Messinvarianzprüfung
+
+### Mediation
+
+### Latente Wachstumskurvenmodelle (vgl. LMM)

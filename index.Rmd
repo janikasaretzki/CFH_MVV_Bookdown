@@ -1,17 +1,17 @@
---- 
+---
 title: "CFH Multivariate Verfahren Bookdown"
 author: "Janika Saretzki & Stephan Goerigk"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+output: bookdown::gitbook
 ---
 
-**Über dieses Skript**
+# Über dieses Skript {-}
 
-Liebe Studierende
+Liebe Studierende,  
 
-dieses Skript führt Sie in die Grundlagen multivariater Verfahren ein. Im Gegensatz zu univariaten Methoden, die jeweils nur eine abhängige Variable analysieren, ermöglichen multivariate Verfahren die gleichzeitige Betrachtung mehrerer Variablen. Dadurch lassen sich Zusammenhänge und Wechselwirkungen präziser erfassen, was zu realistischeren Modellen führt.
+dieses Skript führt Sie in die Grundlagen multivariater Verfahren ein. Im Gegensatz zu univariaten Methoden, die jeweils nur eine abhängige Variable analysieren, ermöglichen multivariate Verfahren die gleichzeitige Betrachtung mehrerer Variablen. Dadurch lassen sich Zusammenhänge und Wechselwirkungen präziser erfassen, was zu realistischeren Modellen führt.  
 
-Multivariate Verfahren sind besonders nützlich, wenn mehrere Einflussfaktoren gleichzeitig auf verschiedene Ergebnisvariablen wirken. Sie bieten zudem Fit-Maße zur Bewertung der Modellgüte sowohl auf Gesamt- als auch auf Teilmodellebene. Obwohl sie höhere Anforderungen an Stichprobengröße und Interpretation stellen, sind sie unverzichtbar für fundierte, praxisnahe Analysen.
+Multivariate Verfahren sind besonders nützlich, wenn mehrere Einflussfaktoren gleichzeitig auf verschiedene Ergebnisvariablen wirken. Sie bieten zudem Fit-Maße zur Bewertung der Modellgüte sowohl auf Gesamt- als auch auf Teilmodellebene. Obwohl sie höhere Anforderungen an Stichprobengröße und Interpretation stellen, sind sie unverzichtbar für fundierte, praxisnahe Analysen.  
 
-Viel Erfolg und Freude beim Arbeiten mit diesen Methoden!
-
+Viel Erfolg und Freude beim Arbeiten mit diesen Methoden!  

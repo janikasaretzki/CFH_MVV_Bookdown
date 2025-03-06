@@ -7,5 +7,80 @@
 #### Messinvarianzprüfung
 
 ### Mediation
+Die Mediation beschreibt einen Mechanismus, durch den eine unabhängige Variable (UV, Prädiktor) eine abhängige Variable (AV, Kriterium) beeinflusst. Dabei vermittelt eine dritte Variable, die Mediator-Variable, diesen Zusammenhang. Mediator-Variablen werden insbesondere dann analysiert, wenn deutliche und gesicherte Zusammenhänge zwischen zwei Variablen bestehen und Hypothesen über die näheren Wirkmechanismen geprüft werden sollen.
+
+**Unterschied zwischen Mediation und Moderation**
+
+Die Mediation wird oft mit der Moderation verwechselt, doch es bestehen klare Unterschiede zwischen den beiden Konzepten:
+
+* Mediation: Eine dritte Variable vermittelt den Zusammenhang zwischen einer UV und einer AV, indem sie als Bindeglied fungiert.
+
+* Moderation: Eine dritte Variable beeinflusst die **Stärke** des Zusammenhang zwischen einer UV und einer AV, ohne selbst den kausalen Mechanismus zu erklären.
+
+Während die Mediation den **Wirkmechanismus** erklärt, gibt die Moderation Aufschluss darüber, unter welchen Bedingungen eine UV einen stärkeren oder schwächeren Einfluss auf eine AV ausübt.
+
+Die Mediation kann in verschiedene Formen unterteilt werden:
+
+* **Vollständige Mediation** bedeutet, dass der Einfluss der UV auf die AV **vollständig** über den Mediator vermittelt wird, sodass ohne den Mediator kein signifikanter Zusammenhang zwischen UV und AV besteht.
+
+* **Partielle Mediation** bedeutet, dass die UV sowohl einen direkten Einfluss auf die AV als auch einen indirekten Einfluss über den Mediator hat. In diesem Fall bleibt der direkte Effekt der UV auf die AV signifikant, auch wenn der Mediator berücksichtigt wird.
+
+---
+
+**Beispiel**
+
+Im Rahmen des Fragebogens zu irrationalen Einstellungen (FIE) wird untersucht, ob der Zusammenhang zwischen Abhängigkeitskognitionen (Variable *ABK*) und der Ausprägung von Depressivität (Variable *BDI*) durch die negative Selbstbewertung (Variable *NSB*) vermittelt wird.
+
+**Hypothese einer vollständigen Mediation:** Es wird angenommen, dass Personen mit stärkeren Abhängigkeitskognitionen dazu neigen, sich selbst als wertlos wahrzunehmen. Diese negative Selbstbewertung führt wiederum zu einer erhöhten Ausprägung von Depressivität. Der direkte Effekt der Abhängigkeitskognitionen auf die Depressivität wird somit über den Mediator vermittelt. 
+
+```{r Setup Mediation, include=FALSE}
+
+options(repos = c(CRAN = "https://cloud.r-project.org")) 
+
+for (package in c("readxl", "lavaan", "semPlot", "psych")) {
+  if (!require(package, character.only = TRUE, quietly = TRUE)) {  
+    install.packages(package)  
+  } else {
+    update.packages(package, ask = FALSE)  
+  }
+  library(package, character.only = TRUE, quietly = TRUE)  
+}
+
+```
+
+```{r Data Mediation, include=FALSE}
+
+FIE = read_excel("Mediation.xlsx")
+
+```
+
+```{r Mediation Model, message=FALSE, warning=FALSE, error=FALSE}
+
+model <- ' # direct effect
+             BDI ~ c*ABK
+           # mediator
+             NSB ~ a*ABK
+             BDI ~ b*NSB
+           # indirect effect (a*b)
+             ab := a*b
+           # total effect
+             total := c + (a*b)
+         '
+
+set.seed(123)
+fit = sem(model, data = FIE, se = "bootstrap", bootstrap = 100)
+summary(fit, fit.measures = TRUE, standardized = TRUE)
+
+```
+
+Die Analyse bestätigt die Hypothese der vollständigen Mediation. Der direkte Effekt von Abhängigkeitskognitionen auf die Depressivität ist nicht signifikant (`c = 0.114, p = .195`), während sowohl der Effekt von Abhängigkeitskognitionen auf die negative Selbstbewertung (`a = 0.507, p < .001`) als auch der Effekt der negativen Selbstbewertung auf die Depressivität (`b = 0.771, p < .001`) signifikant sind. Der indirekte Effekt (`ab = 0.391, p < .001`) bestätigt die Vermittlung des Zusammenhangs durch die negative Selbstbewertung da der direkte Effekt von Abhängigkeitskognitionen auf Depressivität nicht signifikant ist, während der indirekte Effekt über die negative Selbstbewertung signifikant ist.
+
+Dies bedeutet, dass die negativen Selbstbewertungen eine zentrale Rolle in der Entstehung depressiver Symptome spielen. In der Praxis könnte dies darauf hindeuten, dass therapeutische Maßnahmen, die direkt auf die Veränderung negativer Selbstbewertungen abzielen, besonders wirksam sein könnten, um depressive Tendenzen zu reduzieren.
+
+**Praktische Implikationen**
+
+* **Therapeutische Ansätze:** Die Ergebnisse legen nahe, dass Interventionen gezielt an der Reduktion negativer Selbstbewertungen ansetzen sollten, da sie den entscheidenden Mechanismus für die Entstehung und Aufrechterhaltung depressiver Symptome darstellen. 
+
+* **Prävention:** Personen mit ausgeprägten Abhängigkeitskognitionen könnten durch präventive Maßnahmen unterstützt werden, um negative Selbstbewertungen zu vermeiden. Dies könnte beispielsweise durch Selbstwerttraining, Förderung positiver Selbstwahrnehmungen oder die Vermittlung alternativer Denkmuster geschehen.
 
 ### Latente Wachstumskurvenmodelle (vgl. LMM)

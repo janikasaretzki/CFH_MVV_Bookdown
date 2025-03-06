@@ -23,7 +23,7 @@
 <meta name="author" content="Janika Saretzki &amp; Stephan Goerigk" />
 
 
-<meta name="date" content="2025-03-05" />
+<meta name="date" content="2025-03-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -54,6 +54,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -147,6 +211,113 @@
 </div>
 <div id="mediation" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Mediation<a href="strukturgleichungsmodell.html#mediation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Die Mediation beschreibt einen Mechanismus, durch den eine unabhängige Variable (UV, Prädiktor) eine abhängige Variable (AV, Kriterium) beeinflusst. Dabei vermittelt eine dritte Variable, die Mediator-Variable, diesen Zusammenhang. Mediator-Variablen werden insbesondere dann analysiert, wenn deutliche und gesicherte Zusammenhänge zwischen zwei Variablen bestehen und Hypothesen über die näheren Wirkmechanismen geprüft werden sollen.</p>
+<p><strong>Unterschied zwischen Mediation und Moderation</strong></p>
+<p>Die Mediation wird oft mit der Moderation verwechselt, doch es bestehen klare Unterschiede zwischen den beiden Konzepten:</p>
+<ul>
+<li><p>Mediation: Eine dritte Variable vermittelt den Zusammenhang zwischen einer UV und einer AV, indem sie als Bindeglied fungiert.</p></li>
+<li><p>Moderation: Eine dritte Variable beeinflusst die <strong>Stärke</strong> des Zusammenhang zwischen einer UV und einer AV, ohne selbst den kausalen Mechanismus zu erklären.</p></li>
+</ul>
+<p>Während die Mediation den <strong>Wirkmechanismus</strong> erklärt, gibt die Moderation Aufschluss darüber, unter welchen Bedingungen eine UV einen stärkeren oder schwächeren Einfluss auf eine AV ausübt.</p>
+<p>Die Mediation kann in verschiedene Formen unterteilt werden:</p>
+<ul>
+<li><p><strong>Vollständige Mediation</strong> bedeutet, dass der Einfluss der UV auf die AV <strong>vollständig</strong> über den Mediator vermittelt wird, sodass ohne den Mediator kein signifikanter Zusammenhang zwischen UV und AV besteht.</p></li>
+<li><p><strong>Partielle Mediation</strong> bedeutet, dass die UV sowohl einen direkten Einfluss auf die AV als auch einen indirekten Einfluss über den Mediator hat. In diesem Fall bleibt der direkte Effekt der UV auf die AV signifikant, auch wenn der Mediator berücksichtigt wird.</p></li>
+</ul>
+<hr />
+<p><strong>Beispiel</strong></p>
+<p>Im Rahmen des Fragebogens zu irrationalen Einstellungen (FIE) wird untersucht, ob der Zusammenhang zwischen Abhängigkeitskognitionen (Variable <em>ABK</em>) und der Ausprägung von Depressivität (Variable <em>BDI</em>) durch die negative Selbstbewertung (Variable <em>NSB</em>) vermittelt wird.</p>
+<p><strong>Hypothese einer vollständigen Mediation:</strong> Es wird angenommen, dass Personen mit stärkeren Abhängigkeitskognitionen dazu neigen, sich selbst als wertlos wahrzunehmen. Diese negative Selbstbewertung führt wiederum zu einer erhöhten Ausprägung von Depressivität. Der direkte Effekt der Abhängigkeitskognitionen auf die Depressivität wird somit über den Mediator vermittelt.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="strukturgleichungsmodell.html#cb1-1" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="st">&#39; # direct effect</span></span>
+<span id="cb1-2"><a href="strukturgleichungsmodell.html#cb1-2" tabindex="-1"></a><span class="st">             BDI ~ c*ABK</span></span>
+<span id="cb1-3"><a href="strukturgleichungsmodell.html#cb1-3" tabindex="-1"></a><span class="st">           # mediator</span></span>
+<span id="cb1-4"><a href="strukturgleichungsmodell.html#cb1-4" tabindex="-1"></a><span class="st">             NSB ~ a*ABK</span></span>
+<span id="cb1-5"><a href="strukturgleichungsmodell.html#cb1-5" tabindex="-1"></a><span class="st">             BDI ~ b*NSB</span></span>
+<span id="cb1-6"><a href="strukturgleichungsmodell.html#cb1-6" tabindex="-1"></a><span class="st">           # indirect effect (a*b)</span></span>
+<span id="cb1-7"><a href="strukturgleichungsmodell.html#cb1-7" tabindex="-1"></a><span class="st">             ab := a*b</span></span>
+<span id="cb1-8"><a href="strukturgleichungsmodell.html#cb1-8" tabindex="-1"></a><span class="st">           # total effect</span></span>
+<span id="cb1-9"><a href="strukturgleichungsmodell.html#cb1-9" tabindex="-1"></a><span class="st">             total := c + (a*b)</span></span>
+<span id="cb1-10"><a href="strukturgleichungsmodell.html#cb1-10" tabindex="-1"></a><span class="st">         &#39;</span></span>
+<span id="cb1-11"><a href="strukturgleichungsmodell.html#cb1-11" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="strukturgleichungsmodell.html#cb1-12" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-13"><a href="strukturgleichungsmodell.html#cb1-13" tabindex="-1"></a>fit <span class="ot">=</span> <span class="fu">sem</span>(model, <span class="at">data =</span> FIE, <span class="at">se =</span> <span class="st">&quot;bootstrap&quot;</span>, <span class="at">bootstrap =</span> <span class="dv">100</span>)</span>
+<span id="cb1-14"><a href="strukturgleichungsmodell.html#cb1-14" tabindex="-1"></a><span class="fu">summary</span>(fit, <span class="at">fit.measures =</span> <span class="cn">TRUE</span>, <span class="at">standardized =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## lavaan 0.6-18 ended normally after 1 iteration
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         5
+## 
+##   Number of observations                           191
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                               176.345
+##   Degrees of freedom                                 3
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)              -1353.544
+##   Loglikelihood unrestricted model (H1)      -1353.544
+##                                                       
+##   Akaike (AIC)                                2717.088
+##   Bayesian (BIC)                              2733.349
+##   Sample-size adjusted Bayesian (SABIC)       2717.511
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value H_0: RMSEA &lt;= 0.050                       NA
+##   P-value H_0: RMSEA &gt;= 0.080                       NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws              100
+##   Number of successful bootstrap draws             100
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   BDI ~                                                                 
+##     ABK        (c)    0.114    0.089    1.283    0.199    0.114    0.083
+##   NSB ~                                                                 
+##     ABK        (a)    0.507    0.080    6.306    0.000    0.507    0.420
+##   BDI ~                                                                 
+##     NSB        (b)    0.771    0.084    9.169    0.000    0.771    0.681
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .BDI              60.722    5.918   10.261    0.000   60.722    0.482
+##    .NSB              80.736    6.528   12.368    0.000   80.736    0.823
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##     ab                0.391    0.073    5.332    0.000    0.391    0.286
+##     total             0.505    0.101    4.978    0.000    0.505    0.369</code></pre>
+<p>Die Analyse bestätigt die Hypothese der vollständigen Mediation. Der direkte Effekt von Abhängigkeitskognitionen auf die Depressivität ist nicht signifikant (<code>c = 0.114, p = .195</code>), während sowohl der Effekt von Abhängigkeitskognitionen auf die negative Selbstbewertung (<code>a = 0.507, p &lt; .001</code>) als auch der Effekt der negativen Selbstbewertung auf die Depressivität (<code>b = 0.771, p &lt; .001</code>) signifikant sind. Der indirekte Effekt (<code>ab = 0.391, p &lt; .001</code>) bestätigt die Vermittlung des Zusammenhangs durch die negative Selbstbewertung da der direkte Effekt von Abhängigkeitskognitionen auf Depressivität nicht signifikant ist, während der indirekte Effekt über die negative Selbstbewertung signifikant ist.</p>
+<p>Dies bedeutet, dass die negativen Selbstbewertungen eine zentrale Rolle in der Entstehung depressiver Symptome spielen. In der Praxis könnte dies darauf hindeuten, dass therapeutische Maßnahmen, die direkt auf die Veränderung negativer Selbstbewertungen abzielen, besonders wirksam sein könnten, um depressive Tendenzen zu reduzieren.</p>
+<p><strong>Praktische Implikationen</strong></p>
+<ul>
+<li><p><strong>Therapeutische Ansätze:</strong> Die Ergebnisse legen nahe, dass Interventionen gezielt an der Reduktion negativer Selbstbewertungen ansetzen sollten, da sie den entscheidenden Mechanismus für die Entstehung und Aufrechterhaltung depressiver Symptome darstellen.</p></li>
+<li><p><strong>Prävention:</strong> Personen mit ausgeprägten Abhängigkeitskognitionen könnten durch präventive Maßnahmen unterstützt werden, um negative Selbstbewertungen zu vermeiden. Dies könnte beispielsweise durch Selbstwerttraining, Förderung positiver Selbstwahrnehmungen oder die Vermittlung alternativer Denkmuster geschehen.</p></li>
+</ul>
 </div>
 <div id="latente-wachstumskurvenmodelle-vgl.-lmm" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> Latente Wachstumskurvenmodelle (vgl. LMM)<a href="strukturgleichungsmodell.html#latente-wachstumskurvenmodelle-vgl.-lmm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -209,7 +380,7 @@ gitbook.start({
 },
 "toc": {
 "collapse": "subsection",
-"depth": 6
+"depth": 20
 }
 });
 });
